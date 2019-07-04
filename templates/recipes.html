@@ -1,9 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ {% extends 'base.html' %}
+ {% block content %}
     
-</head>
-<body>
+    <ul class="collapsible" >
+    {% for recipe in recipes %}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i><strong>{{recipe.recipe_name}}</strong> &nbsp;- {{recipe.cuisine_type}} - {{recipe.author}} - {{recipe.cook_time}}</div>
+      
+      
+      <div class="collapsible-body"><span>
+      
+      <ul class="collapsible" data-collapsible="expandable">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">local_grocery_store</i>Ingredients</div>
+      <div class="collapsible-body"><span>{{recipe.ingredients}}</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">format_list_numbered</i>Method</div>
+      <div class="collapsible-body"><span>{{recipe.method}}</span></div>
+    </li>
+    
+  </ul>
+      
+      
+      
+      
+      
+      
+      </span></div>
+    </li>
+    {% endfor %}
+ </ul>
+    
+    
     {% for recipe in recipes %} <br>
     {{recipe.cuisine_type}}<br>
     {{recipe.recipe_name}}<br>
@@ -11,8 +39,11 @@
     {{recipe.ingredients}}<br>
     {{recipe.method}}<br>
     {{recipe.cook_time}}<br>
-    
-    
     {% endfor %}
-</body>
-</html>
+
+
+
+
+
+
+{% endblock %}
