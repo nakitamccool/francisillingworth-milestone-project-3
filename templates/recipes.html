@@ -4,7 +4,7 @@
     <ul class="collapsible" >
     {% for recipe in recipes %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">expand_more</i><strong>{{recipe.recipe_name}}</strong> &nbsp;- {{recipe.cuisine_type}} - {{recipe.author}} - {{recipe.cook_time}}</div>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i><strong>{{recipe.recipe_name}}</strong> &nbsp;- {{recipe.cuisine_type}} - {{recipe.author}} - &nbsp;<strong>Cook time {{recipe.cook_time}} minutes</strong></div>
       
       
       <div class="collapsible-body"><span>
