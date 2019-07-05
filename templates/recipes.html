@@ -5,11 +5,11 @@
     {% for recipe in recipes %}
     <li>
       <div class="collapsible-header">
-        <div class="col s9">
+        <div class="recipe_header col s9">
             <i class="material-icons">expand_more</i>
            <strong>{{recipe.recipe_name}}</strong> &nbsp;- {{recipe.cuisine_type}} - {{recipe.author}} - &nbsp;<strong>Cook time {{recipe.cook_time}} minutes</strong>
         </div>
-        <div class= "col s3 editDelete">
+        <div class= "deleteEdit col s3">
               <a class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
               <a class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
         </div>
@@ -42,15 +42,7 @@
  </ul>
     
     
-    {% for recipe in recipes %} <br>
-    {{recipe.cuisine_type}}<br>
-    {{recipe.recipe_name}}<br>
-    {{recipe.author}}<br>
-    {{recipe.ingredients}}<br>
-    {{recipe.method}}<br>
-    {{recipe.cook_time}}<br>
-    {% endfor %}
-
+   
 
 
 
