@@ -3,6 +3,7 @@ from flask import Flask , render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
+
 db_password = os.environ.get('DB_PASSWORD')
 
 app = Flask(__name__)
@@ -32,7 +33,12 @@ def insert_recipe():
     return redirect(url_for('get_recipes'))
 
 
-
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
+    all_cuisine = mongo.db.cuisine.find()
+    return render_template('editrecipe.html', recipe = the_recipe, cuisine=all_cuisine)
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

@@ -1,6 +1,6 @@
  {% extends 'base.html' %}
  {% block content %}
-    
+    <div class = "row">
     <ul class="collapsible" >
     {% for recipe in recipes %}
     <li>
@@ -10,7 +10,7 @@
            <strong>{{recipe.recipe_name}}</strong> &nbsp;- {{recipe.cuisine_type}} - {{recipe.author}} - &nbsp;<strong>Cook time {{recipe.cook_time}} minutes</strong>
         </div>
         <div class= "deleteEdit col s3">
-              <a class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
+              <a href= "{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
               <a class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
         </div>
         
@@ -40,7 +40,7 @@
     </li>
     {% endfor %}
  </ul>
-    
+</div>  
     
    
 
