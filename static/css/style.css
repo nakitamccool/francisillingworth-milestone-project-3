@@ -1,0 +1,33 @@
+.btn_edit{
+    height:28px;
+    margin: 5px 5px;
+    line-height: 28px;
+    padding-left: 3px;
+    padding-right: 6px;
+   
+    
+    
+}    
+
+.btn_delete{
+    height:28px;
+    margin: 5px 10px;
+    line-height: 28px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #b70808;
+    
+}
+
+.collapsible-header i {
+ margin:0;}   
+ 
+ .btn_delete:hover {
+    background-color: #71231d;
+}
+
+.editDelete{
+    position: absolute;
+    right: 0;
+    
+}
