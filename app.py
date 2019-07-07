@@ -17,6 +17,22 @@ mongo = PyMongo(app)
 
 
 
+@app.route('/add_cuisine')
+def add_cuisine():
+    return render_template('addcuisine.html', cuisine=mongo.db.cuisine.find())
+
+
+@app.route('/insert_cuisine', methods=['POST'])
+def insert_cuisine():
+    cuisines=mongo.db.cuisine
+    cuisines.insert_one(request.form.to_dict())
+    return redirect(url_for('add_recipe'))
+
+
+
+
+
+
 
 @app.route('/get_cuisines')
 def get_cuisines():
