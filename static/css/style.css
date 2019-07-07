@@ -26,6 +26,18 @@
     background-color: #71231d;
 }
 
+.cancel_button{
+    margin: 5px 15px;
+    padding-left: 3px;
+    padding-right: 6px;
+    background-color: #b70808
+    
+}
+
+
+ .cancel_button:hover {
+    background-color: #71231d;
+}
 
 
 .recipe_header{
