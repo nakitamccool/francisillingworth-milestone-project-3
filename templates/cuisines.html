@@ -22,6 +22,10 @@
 <div class = "row">
                 <a class = "add_cuisine" href = "{{ url_for('add_cuisine_edit') }}">+ add new cuisine</a>
             </div>
+            <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn cancel_button">
+                <i class="material-icons right">cancel</i>Go Back
+            </a>
+            
 </div>
 {% endblock %}
  

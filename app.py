@@ -16,6 +16,14 @@ mongo = PyMongo(app)
 @app.route('/')
 
 
+
+@app.route('/find_recipe')
+def find_recipe():
+    return render_template("findrecipe.html", cuisine=mongo.db.cuisine.find(), recipes=mongo.db.recipe.distinct('author'))
+
+
+    
+
 @app.route('/get_recipes')
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.recipe.find())
@@ -24,6 +32,7 @@ def get_recipes():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('addrecipe.html', cuisine=mongo.db.cuisine.find())
+    
 
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
@@ -118,7 +127,6 @@ def insert_cuisine_edit():
 @app.route('/index')
 def index():
     return render_template("index.html")
-
 
 
 

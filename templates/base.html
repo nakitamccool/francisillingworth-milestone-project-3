@@ -13,9 +13,10 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Code Institute Cookery School</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+        <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
+        <li><a href="{{ url_for('find_recipe') }}">Search for Recipe</a></li>
       </ul>
     </div>
   </nav>
