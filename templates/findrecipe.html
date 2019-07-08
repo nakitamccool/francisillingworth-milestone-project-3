@@ -23,11 +23,12 @@
                 <i class="material-icons prefix">account_circle</i>
                 <select id="author" name="author">
                   <option value="" disabled selected>Choose Author</option>
-                  {% for cat in recipes %}
-                      <option value="{{cat.author}}" >{{cat.author}}</option>
+                  {% for author in authors %}
+                      <option value="{{author}}" >{{author}}</option>
 
                   {% endfor %}
                 </select>
+                
                     <label>Author</label>
             </div>
             </div>

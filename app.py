@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 
 @app.route('/find_recipe')
 def find_recipe():
-    return render_template("findrecipe.html", cuisine=mongo.db.cuisine.find(), recipes=mongo.db.recipe.distinct('author'))
+    return render_template("findrecipe.html", cuisine=mongo.db.cuisine.find(), authors=mongo.db.recipe.find().distinct('author'))
 
 
     
