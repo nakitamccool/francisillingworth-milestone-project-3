@@ -17,12 +17,10 @@ mongo = PyMongo(app)
 
 
 
-@app.route('/find_recipe')
-def find_recipe():
-    return render_template("findrecipe.html", cuisine=mongo.db.cuisine.find(), authors=mongo.db.recipe.find().distinct('author'))
+@app.route('/index')
+def index():
+    return render_template("index.html")
 
-
-    
 
 @app.route('/get_recipes')
 def get_recipes():
@@ -124,9 +122,16 @@ def insert_cuisine_edit():
 
 
 
-@app.route('/index')
-def index():
-    return render_template("index.html")
+@app.route('/find_recipe')
+def find_recipe():
+    return render_template("findrecipe.html", cuisine=mongo.db.cuisine.find(), authors=mongo.db.recipe.find().distinct('author'))
+
+@app.route('/filter_recipes')
+def filter_recipes():
+     return render_template("results.html")
+
+
+
 
 
 
