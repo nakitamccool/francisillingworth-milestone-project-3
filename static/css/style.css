@@ -55,11 +55,55 @@
     margin-left:5%;
 }
 
-.addRecipe{
-    
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.right {
+  right: 0;
+  border-left-color:black;
+  border-left-width:5px;
+  
+  
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .findRecipe{
-    background-image: url(https://previews.123rf.com/images/magone/magone1507/magone150700095/42628228-chopped-onions-on-wooden-cutting-board-top-view.jpg);
+    padding:10px;
+    opacity: 1
+}
+
+.addRecipe{
+    opacity: 1
+    
+}
+img{
+    position: fixed;
+    opacity: 0.3;
+    
+    z-index: -2
+   
+  
+  
+
+}
+
+.box{
+    background-color: #ff8a0017;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }

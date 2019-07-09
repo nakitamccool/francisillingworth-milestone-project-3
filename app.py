@@ -128,9 +128,11 @@ def find_recipe():
 
 @app.route('/filter_recipes')
 def filter_recipes():
-     return render_template("results.html")
-
-
+        cuisines=mongo.db.cuisine
+        recipes=mongo.db.recipe
+        mongo.db.recipe.find({ cuisine_type : "{{cuisine_type}}" })
+        
+        return render_template("results.html")
 
 
 
