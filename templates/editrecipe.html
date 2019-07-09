@@ -6,7 +6,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">local_dining</i>
-                <input id="recipe_name" name="recipe_name" id="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}">
+                <input id="recipe_name" name="recipe_name" id="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" required>
                 <label for="icon_prefix">Recipe Name</label>
             </div>
 
@@ -14,8 +14,8 @@
         <div class="row">
             <div class="input-field col s12">
                   <i class="material-icons prefix">outlined_flag</i>
-                    <select id="cuisine" name="cuisine_type">
-                  <option value="" disabled selected>Choose Category</option>
+                    <select id="cuisine" name="cuisine_type" >
+                  <option value="" disabled selected required>Choose Category</option>
                   {% for cat in cuisine %}
                       {% if cat.cuisine_type == recipe.cuisine_type %}
                       <option value="{{cat.cuisine_type}}" selected >{{cat.cuisine_type}}</option>
@@ -33,22 +33,22 @@
 
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="author" name="author" id="author" type="text" class="validate" value="{{recipe.author}}">
+                <input id="author" name="author" id="author" type="text" class="validate" value="{{recipe.author}}" required>
                 <label for="icon_telephone">Author</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">local_grocery_store</i>
-                <textarea id="ingredients" name="ingredients" id="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
+                <textarea id="ingredients" name="ingredients" id="ingredients" class="materialize-textarea" required>{{recipe.ingredients}}</textarea>
                 <label for="icon_telephone">Ingredients</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">format_list_numbered</i>
-                <textarea name="method" id="method" class="materialize-textarea">{{recipe.method}}</textarea>
+                <textarea name="method" id="method" class="materialize-textarea" required>{{recipe.method}}</textarea>
                 <label for="icon_telephone">Method</label>
             </div>
             <div class="input-field col s12">
                 <i class="material-icons prefix">alarm</i>
-                <input id="cook_time" name="cook_time" id="cook_time" type="tel" class="validate" value="{{recipe.cook_time}}">
+                <input id="cook_time" name="cook_time" id="cook_time" type="tel" class="validate" value="{{recipe.cook_time}}" required>
                 <label for="icon_telephone">Cook time (minutes)</label>
             </div>
         </div>
