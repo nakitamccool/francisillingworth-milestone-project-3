@@ -130,8 +130,7 @@ def find_recipe():
 def filter_recipes():
         cuisines=mongo.db.cuisine
         recipes=mongo.db.recipe
-        
-        
+        recipes.find()
         return render_template("results.html")
 
 
