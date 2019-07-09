@@ -126,16 +126,17 @@ def insert_cuisine_edit():
 def find_recipe():
     return render_template("findrecipe.html", cuisine=mongo.db.cuisine.find(), authors=mongo.db.recipe.find().distinct('author'))
 
+
+
+
 @app.route('/filter_recipes', methods = ['POST','GET'])
 def filter_recipes():
     recipes=mongo.db.recipe
     author=request.form.get('author')
     cuisine_type=request.form.get('cuisine_type')
-    cook_time=request.form.get('cook_time')
     results=recipes.find({ "author": author})
     results_cuisine_type=recipes.find({ "cuisine_type":cuisine_type })
-    results_cook_time=recipes.find({ "cook_time":cook_time })
-    return render_template("results.html", results = results, results_cuisine_type= results_cuisine_type, results_cook_time=results_cook_time)
+    return render_template("results.html", results = results, results_cuisine_type = results_cuisine_type)
 
 
 

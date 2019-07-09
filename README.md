@@ -22,7 +22,7 @@ From the home page you can proceed to the add recipe form by clicking the clearl
 
 ##### Finding a recipe
 
-From the home page you can proceed to the "Find Recipe" page by clicking the clearly defined "Find Recipe" button or using the "Find Recipe" navbar tab (as you can anywhere across the website). The page is effectivily a form where you choose 3 different fields (cuisine type, author and cook time) to filter the full list of recipes by, these can be used alone or together. If the form is submitted without choosing any parameters a full list of recipes with be displayed. Once the parameters are chosen the form is submitted by clicking the clearly labelled "Find Recipe" button beneath the form. This will redirect the user to the "Results Page" displaying all results or a message saying no results found should the parameters chosen not match any recipes.
+From the home page you can proceed to the "Find Recipe" page by clicking the clearly defined "Find Recipe" button or using the "Find Recipe" navbar tab (as you can anywhere across the website). The page is effectivily a form where you choose 2 different fields (cuisine type and author) to filter the full list of recipes by, these can be used alone or together however if used together you get all the results from each filter as opposed to them working together for a more advanced search. If the form is submitted without choosing any parameters no recipes with be displayed. Once the parameters are chosen the form is submitted by clicking the clearly labelled "Find Recipe" button beneath the form. This will redirect the user to the "Results Page" displaying all results.
 
 
 
@@ -46,6 +46,8 @@ Add cuisine type - Allows users to add new cuisine type to data base by completi
 
 Edit cuisine type - Allows users to update existing cuisine types on database by editing the name and submitting the changes.
 
+Find recipe - Allows users to seach for recipes by cuisine type or author by chosing values from two separate dropdown lists.
+
 
 #### Features Left to Implement
 
@@ -53,6 +55,9 @@ I would like to add share functionality so poeple can share favourite recipes vi
 
 I would like to have a login feature so people can like or rate recipes. This wouldnt work at the moment as without user logins someone could vote as many times as they want.
 
+I would like to add additional filtering functionality such as by cook time 
+
+I would like to add functionality where the filters work together to provide a more comprehensive search feature. Currently the filters pull up all recipes that relate to just that filter causing duplicates and results that are not in line with the other selected filters. Hence the form currently requests to only apply one filter at a time.
 
 ## Technologies Used
 

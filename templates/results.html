@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>View all</h3>
+<h3>Search Results</h3>
 
 <div class="row">
   <ul class="collapsible">
@@ -125,6 +125,11 @@
 {% endfor %}
 
 </ul>
+
+<a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn cancel_button">
+                <i class="material-icons right">cancel</i>Go back to Search
+            </a>
+
 </div>
 
 
