@@ -3,10 +3,15 @@
 This project is designed to as a platform on which to demonstrate my data centric backend development skills. 
 
 
+## Demo
+
+A live demo of the website can be found [here](https://github.com/francisillingworth/milestone-project-3)
+
 
 ## UX
 
 The Code Insitute Cook Book is a web application that allows a user to find/edit and delete recipes that already exist in a NoSQL Mongo database or add their own new recipes to the database which can then be found/edited/deleted with the search functions. The website does this in a simple intuative way with easy navigation, minimal fields and clear direction regarding requirements to proceed with the task you are trying to do.  
+
 The design uses faded and light background colours so not to distract the user but also provide an asthetically pleasing webpage. Meanwhile any aspect of the page that has an effect (such as the edit, submit, delete buttons) all use bright colours to make them stand out and also provide insight into their purpose (e.g all delete buttons are red with a trashcan icon in providing clear meaning despite the button not actually containing the word delete). 
 
 Recipes are displayed as an accordian list. When initially viewed this list will show each recipe by its name, cuisine type, author and cook time. Upon clicking a recipe this opens the accordian to reveal

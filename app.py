@@ -9,10 +9,10 @@ from bson.objectid import ObjectId
 app = Flask(__name__)
 
 
-db_password = os.environ.get('DB_PASSWORD')
+db_password = os.getenv('DB_PASSWORD')
 
 app.config["MONGO_DBNAME"] = 'recipe_project'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-aogax.mongodb.net/recipe_project?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 'mongodb+srv://root:db_password@myfirstcluster-aogax.mongodb.net/recipe_project?retryWrites=true&w=majority'
 
 mongo = PyMongo(app) 
 
