@@ -12,7 +12,7 @@ app = Flask(__name__)
 db_password = os.getenv('DB_PASSWORD')
 
 app.config["MONGO_DBNAME"] = 'recipe_project'
-app.config["MONGO_URI"] = 
+app.config["MONGO_URI"] 
 
 mongo = PyMongo(app) 
 
