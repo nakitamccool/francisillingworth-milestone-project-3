@@ -5,7 +5,7 @@ This project is designed to as a platform on which to demonstrate my data centri
 
 ## Demo
 
-A live demo of the website can be found [here](https://github.com/francisillingworth/milestone-project-3)
+A live demo of the website can be found [here](https://milestone-project-three.herokuapp.com/)
 
 
 ## UX
@@ -108,7 +108,7 @@ Go to the "Find Recipe" page and select a filtering parameter then click find re
 ## Deployment
 
 
-The website is hosted by Heroku and is deployed from the master branch. 
+The website is hosted by Heroku and is deployed from the master branch. A live demo of the website can be found [here](https://milestone-project-three.herokuapp.com/)
 You can also git clone the code to run it locally on your machine via this link [Milestone Project 3 Git Hub Link](https://github.com/francisillingworth/milestone-project-3) .
 
 
@@ -117,10 +117,7 @@ This section should describe the process you went through to deploy the project 
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+The Deployed version and the development versions are identical. The same Env Variable has been used
 
 ## Credits
 The nav bar, forms and accordians were taken from Materialize.
