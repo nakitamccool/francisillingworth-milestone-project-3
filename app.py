@@ -12,7 +12,7 @@ app = Flask(__name__)
 db_password = os.getenv('DB_PASSWORD')
 
 app.config["MONGO_DBNAME"] = 'recipe_project'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-aogax.mongodb.net/recipe_project?retryWrites=true&w=majority'
+app.config["MONGO_URI"] = 
 
 mongo = PyMongo(app) 
 
