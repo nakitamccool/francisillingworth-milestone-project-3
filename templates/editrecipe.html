@@ -11,10 +11,10 @@
             </div>
 
 
-        <div class="row">
-            <div class="input-field col s12">
-                  <i class="material-icons prefix">outlined_flag</i>
-                    <select id="cuisine" name="cuisine_type" >
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">outlined_flag</i>
+                    <select id="cuisine" name="cuisine_type">
                   <option value="" disabled selected required>Choose Category</option>
                   {% for cat in cuisine %}
                       {% if cat.cuisine_type == recipe.cuisine_type %}
@@ -27,8 +27,8 @@
                     <label>Cuisine Type</label>
                 </div>
             </div>
-            <div class = "row">
-                <a class = "add_cuisine" href = "{{ url_for('get_cuisines') }}">+ add new cuisine or edit existing</a>
+            <div class="row">
+                <a class="add_cuisine" href="{{ url_for('get_cuisines') }}">+ add new cuisine or edit existing</a>
             </div>
 
             <div class="input-field col s12">
@@ -61,8 +61,8 @@
             </a>
         </div>
 
-        
-        
+
+
     </form>
 </div>
 

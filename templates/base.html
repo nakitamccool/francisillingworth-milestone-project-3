@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static' , filename = "css/style.css")}}" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="{{url_for('static' , filename = " css/style.css ")}}" type="text/css" />
 
 </head>
+
 <body>
   <img src="https://static01.nyt.com/images/2017/09/27/dining/27INSTAPOT1/27INSTAPOT1-superJumbo.jpg"></img>
   <header>
     <nav>
-    <div class="nav-wrapper">
-      <a href="{{ url_for('index') }}" class="brand-logo hide-on-med-and-down">Code Institute Cookery School</a>
-      <ul id="nav-mobile" class="right">
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-        <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
-        <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
-      </ul>
-    </div>
-  </nav>
+      <div class="nav-wrapper">
+        <a href="{{ url_for('index') }}" class="brand-logo hide-on-med-and-down">Code Institute Cookery School</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+          <li><a href="{{ url_for('find_recipe') }}">Find Recipe</a></li>
+          <li><a href="{{ url_for('get_recipes') }}">All Recipes</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
-  
-    <div class="container box">
-    {% block content %}
-    {% endblock %}
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script type="text/javascript">
-         $(document).ready(function(){
-    $('.collapsible').collapsible();
-    $('select').material_select();
-  });
-      
-    </script>
+
+  <div class="container box">
+    {% block content %} {% endblock %}
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('select').material_select();
+    });
+  </script>
 
 
 </body>
+
 </html>

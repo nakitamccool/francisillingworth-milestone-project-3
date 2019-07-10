@@ -4,22 +4,31 @@
 
 <div class="split left">
     <div class="centered">
-        <div class = "findRecipe">
-                <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn blue">
+        <div class="card">
+            <h3>Add Recipe</h3>
+            <p class="card-text">Got a recipe you jut cant keep to yourself? Add it to share with the world
+                <p>
+                    <div class="findRecipe">
+                        <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn blue">
                 Add Recipe
             </a>
-        </div> 
+                    </div>
         </div>
     </div>
 </div>
 
 <div class="split right">
     <div class="centered">
-        <div class = "addRecipe">
-        <a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn green">
+        <div class="card">
+            <h3>Find Recipe</h3>
+            <p class="card-text">Looking for some inspiration? Find the perfect dish that's bound to impress
+                <p>
+                    <div class="addRecipe">
+                        <a href="{{ url_for('find_recipe') }}" class="waves-effect waves-light btn green">
                Find Recipe
             </a>
-        </div>  
+                    </div>
+        </div>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block content %}
+ {% extends 'base.html' %} {% block content %}
 
 <h3>Search Results</h3>
 
@@ -42,87 +42,47 @@
 </div>
 </li>
 
-{% endfor %}
+{% endfor %} {% for result in results_cuisine_type %}
+<li>
+  <div class="collapsible-header">
+    <div class="recipe_header col s9">
+      <i class="material-icons">expand_more</i>
+      <strong>{{result.recipe_name}}</strong> &nbsp;- {{result.cuisine_type}} - {{result.author}} - &nbsp;<strong>Cook time {{result.cook_time}} minutes</strong>
+    </div>
+    <div class="deleteEdit col s3">
+      <a href="{{url_for('edit_recipe', recipe_id=result._id)}}" class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
+      <a href="{{url_for('delete_recipe' , recipe_id=result._id)}}" class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
+    </div>
 
-   {% for result in results_cuisine_type %}
-    <li>
-      <div class="collapsible-header">
-        <div class="recipe_header col s9">
-          <i class="material-icons">expand_more</i>
-          <strong>{{result.recipe_name}}</strong> &nbsp;- {{result.cuisine_type}} - {{result.author}} - &nbsp;<strong>Cook time {{result.cook_time}} minutes</strong>
-        </div>
-        <div class="deleteEdit col s3">
-          <a href="{{url_for('edit_recipe', recipe_id=result._id)}}" class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
-          <a href="{{url_for('delete_recipe' , recipe_id=result._id)}}" class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
-        </div>
-
-      </div>
+  </div>
 
 
-      <div class="collapsible-body"><span>
+  <div class="collapsible-body"><span>
       
       <ul class="collapsible" data-collapsible="expandable">
     <li>
       <div class="collapsible-header"><i class="material-icons">local_grocery_store</i>Ingredients</div>
       <div class="collapsible-body"><span>{{result.ingredients}}</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">format_list_numbered</i>Method</div>
-      <div class="collapsible-body"><span>{{result.method}}</span></div>
-    </li>
+</li>
+<li>
+  <div class="collapsible-header"><i class="material-icons">format_list_numbered</i>Method</div>
+  <div class="collapsible-body"><span>{{result.method}}</span></div>
+</li>
 
-  </ul>
-
-
+</ul>
 
 
 
 
-  </span>
+
+
+</span>
 </div>
 </li>
 
 {% endfor %}
 
-   {% for result in results_cook_time %}
-    <li>
-      <div class="collapsible-header">
-        <div class="recipe_header col s9">
-          <i class="material-icons">expand_more</i>
-          <strong>{{result.recipe_name}}</strong> &nbsp;- {{result.cuisine_type}} - {{result.author}} - &nbsp;<strong>Cook time {{result.cook_time}} minutes</strong>
-        </div>
-        <div class="deleteEdit col s3">
-          <a href="{{url_for('edit_recipe', recipe_id=result._id)}}" class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
-          <a href="{{url_for('delete_recipe' , recipe_id=result._id)}}" class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
-        </div>
 
-      </div>
-
-
-      <div class="collapsible-body"><span>
-      
-      <ul class="collapsible" data-collapsible="expandable">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">local_grocery_store</i>Ingredients</div>
-      <div class="collapsible-body"><span>{{result.ingredients}}</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">format_list_numbered</i>Method</div>
-      <div class="collapsible-body"><span>{{result.method}}</span></div>
-    </li>
-
-  </ul>
-
-
-
-
-
-
-  </span>
-</div>
-</li>
-
-{% endfor %}
 
 </ul>
 
@@ -139,3 +99,4 @@
 
 
 {% endblock %}
+    

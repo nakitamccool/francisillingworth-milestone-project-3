@@ -22,14 +22,13 @@ From the home page you can proceed to the add recipe form by clicking the clearl
 
 ##### Finding a recipe
 
-From the home page you can proceed to the "Find Recipe" page by clicking the clearly defined "Find Recipe" button or using the "Find Recipe" navbar tab (as you can anywhere across the website). The page is effectivily a form where you choose 2 different fields (cuisine type and author) to filter the full list of recipes by, these can be used alone or together however if used together you get all the results from each filter as opposed to them working together for a more advanced search. If the form is submitted without choosing any parameters no recipes with be displayed. Once the parameters are chosen the form is submitted by clicking the clearly labelled "Find Recipe" button beneath the form. This will redirect the user to the "Results Page" displaying all results.
+From the home page you can proceed to the "Find Recipe" page by clicking the clearly defined "Find Recipe" button or using the "Find Recipe" navbar tab (as you can anywhere across the website). The page is effectivily a form where a user can choose from 2 different fields (cuisine type and author) to filter the full list of recipes by, these can be used alone or together however if used together you get all the results from each filter as opposed to them working together for a more advanced search. If the form is submitted without choosing any parameters no recipes with be displayed. Once the parameters are chosen the form is submitted by clicking the clearly labelled "Find Recipe" button beneath the form. This will redirect the user to the "Results Page" displaying all results.
 
 
 
 ##### Editing/Deleting a recipe
 
-Recipes are diplayed on 2 pages. The "All Recipes" page and the "Results Page" (you would be redirected her after submitting the find a recipe form on the "Find Recipe" page). Recipies are displayed as an accordian where the recipe name, cuisine type, author and cook time are all displayed without opening. Located to the right of each this information there are 2 clearly labelled buttons, Edit and Delete (Delete has no text but is easily recognisable due to the trashcan icon and red colour). To delete a recipe simple click the delete item and the recipe will be removed premenatly from the database. To click the edit button. This will redirect the user to an identical page to the "Add Recipe" page with the exception that the fields will already be filled in with the current recipe information. All fields are required so once the desired fields have been edited the user would just click the "Update Recipe" button. The user will then be redirected back to the "All Recipes" page ******or the results page*********  If the user decides that they no longer wish to edit the recipe they can click the "Cancel" button found next to the update button which will redirect the user back to the "All Recipes" page ******or the results page*********
-
+Recipes are diplayed on 2 pages. The "All Recipes" page and the "Results Page" (you would be redirected her after submitting the find a recipe form on the "Find Recipe" page). Recipies are displayed as an accordian where the recipe name, cuisine type, author and cook time are all displayed without opening. Located to the right of each this information there are 2 clearly labelled buttons, Edit and Delete (Delete has no text but is easily recognisable due to the trashcan icon and red colour). To delete a recipe a user would simply click the delete item and the recipe will be removed premenatly from the database. To edit a recipe the user would click the edit button. This will redirect the user to an identical page to the "Add Recipe" page with the exception that the fields will already be filled in with the current recipe information. All fields are required so once the desired fields have been edited the user would just click the "Update Recipe" button. The user will then be redirected back to the "All Recipes" page. If the user decides that they no longer wish to edit the recipe they can click the "Cancel" button found next to the update button which will redirect the user back to the "All Recipes".
 
 
 ## Features
@@ -71,10 +70,36 @@ Python - Used for all functionality - CRUD
 
 Flask - micro framework used to run application
 
-Mongo - Mongo was used for my NoSQL Database due to its ease of use.
+Mongo - Mongo was used for my NoSQL Database due to its ease of use anb my wish to practice working with NoSQL (I recognise MySQL would have been a better database design for this project had it been of anything other than a skills development tool).
 
 .
 ## Testing
+
+There was no automated testing used for this project. Each function has been tested thouroughly manually. There are 5 main functions across the web.
+
+1 - Add recipe
+Go to the "Add Recipe" Page Try to submit a recipe with one or more of the fields incomplete - The form will not submit and an error message will display on the screen showing the user which fields require revisiting.
+
+2 - Edit recipe
+Go to the "Edit Recipe" page and try to submit a recipe with one or more of the fields incomplete - The form will not submit and an error message will display on the screen showing the user which fields require revisiting.
+Go to the "Edit Recipe" page and edit a field in the edit recipe form - Click update recipe. Find the recipe using either on the "All Recipes" page or via the "Find Recipe" page using the correct filters. The original recipe will now be updated to include the changes
+
+3 - Delete recipe/cuisine type 
+Find a recipe on the "All Recipes" page or a cuisine on the "Cuisines" page and click the delete button -  Now try to find the recipe using either on the "All Recipes" page or via the "Find Recipe" page using the correct filters. The recipe will now be no longer show as it has been removed from the database. If you chose to delete a cuisine this will no longer show on the "Cuisines" page and willalso no longer show in any of the cuisine dropdowns across the whole website. 
+
+4 - Add cuisine type
+Go to the "Add Cuisine" page and submit without adding a value to the form. The form will not submit and an error message will display on the screen showing the user why the form hasnt submitted.
+Go to the "Add Cuisine" page and type in a new cuisne, then submit the form - The new cuisine type will now show in all Cuisine Type dropdown menus across the website.
+
+5 - Edit cuisine type
+Go to the "Edit Cuisine" page and submit the form after removing all text from the cuisine field. The form will not submit and an error message will display on the screen showing the user why the form hasnt submitted.
+Go to the "Edit Cuisine" page and edit a cuisne, then submit the form - The updated cuisine type will now show in all Cuisine Type dropdown menus across the website and the old cuisine type will no longer appear.
+
+6 - Find recipe - Allows users to seach for recipes by cuisine type or author by chosing values from two separate dropdown lists.
+
+
+
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.

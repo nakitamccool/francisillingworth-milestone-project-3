@@ -4,9 +4,12 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
 
-db_password = os.environ.get('DB_PASSWORD')
+
 
 app = Flask(__name__)
+
+
+db_password = os.environ.get('DB_PASSWORD')
 
 app.config["MONGO_DBNAME"] = 'recipe_project'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-aogax.mongodb.net/recipe_project?retryWrites=true&w=majority'
@@ -136,6 +139,7 @@ def filter_recipes():
     cuisine_type=request.form.get('cuisine_type')
     results=recipes.find({ "author": author})
     results_cuisine_type=recipes.find({ "cuisine_type":cuisine_type })
+    number=recipes.count({ "cuisine_type":cuisine_type })
     return render_template("results.html", results = results, results_cuisine_type = results_cuisine_type)
 
 

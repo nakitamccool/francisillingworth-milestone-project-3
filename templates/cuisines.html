@@ -1,31 +1,31 @@
  {% extends 'base.html' %} {% block content %}
 <div class="row">
 
-    <h3>Cuisines</h3>
-    <ul class="collapsible">
-      {% for cuisine in cuisine %}
-      <li>
-        <div class="collapsible-header">
-          <div class="recipe_header col s9">
-            <strong>{{cuisine.cuisine_type}}</strong>
-          </div>
-          <div class="deleteEdit col s3">
-            <a href="{{url_for('edit_cuisine', cuisine_id = cuisine._id)}}" class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
-            <a href="{{url_for('delete_cuisine', cuisine_id = cuisine._id)}}" class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
-          </div>
+  <h3>Cuisines</h3>
+  <ul class="collapsible">
+    {% for cuisine in cuisine %}
+    <li>
+      <div class="collapsible-header">
+        <div class="recipe_header col s9">
+          <strong>{{cuisine.cuisine_type}}</strong>
         </div>
-        
-</li>
-{% endfor %}
+        <div class="deleteEdit col s3">
+          <a href="{{url_for('edit_cuisine', cuisine_id = cuisine._id)}}" class="waves-effect waves-light btn btn_edit"><i class="material-icons left">edit</i>Edit</a>
+          <a href="{{url_for('delete_cuisine', cuisine_id = cuisine._id)}}" class="waves-effect waves-light btn btn_delete"><i class="material-icons deleteIcon">delete_forever</i></a>
+        </div>
+      </div>
 
-</ul>
-<div class = "row">
-                <a class = "add_cuisine" href = "{{ url_for('add_cuisine_edit') }}">+ add new cuisine</a>
-            </div>
-            <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn cancel_button">
+    </li>
+    {% endfor %}
+
+  </ul>
+  <div class="row">
+    <a class="add_cuisine" href="{{ url_for('add_cuisine_edit') }}">+ add new cuisine</a>
+  </div>
+  <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn cancel_button">
                 <i class="material-icons right">cancel</i>Go Back
             </a>
-            
+
 </div>
 {% endblock %}
  
